@@ -13,6 +13,8 @@ namespace api.layer.Controllers
 
         public ReportController(IGitActionsManager gitActionsManager)
         {
+            var test = "123213";
+            var test1 = "123213";
             _gitActionsManager = gitActionsManager;
         }
 
