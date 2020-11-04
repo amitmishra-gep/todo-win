@@ -12,16 +12,33 @@ namespace api.layer.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var abc = "abcd";
-            var abc1 = "abcd";
-            var abc3 = "abcd";
             var rng = new Random();
+            sum();
+            Add();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55)
             })
             .ToArray();
+        }
+
+        private bool sum()
+        {
+            int unused = 456;
+            int number1 = 1234;
+            int number2 = 1234;
+            int number3 = number1 + number2;
+            return number3;
+        }
+
+        private bool Add()
+        {
+            int unused = 456;
+            int number1 = 1234;
+            int number2 = 1234;
+            int number3 = number1 + number2;
+            return number3;
         }
     }
 }
