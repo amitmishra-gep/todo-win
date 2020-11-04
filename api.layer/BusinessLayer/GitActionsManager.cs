@@ -1,12 +1,10 @@
 ﻿using api.layer.DataAccessLayer;
 using api.layer.Entities;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace api.layer.BusinessLayer
@@ -33,6 +31,8 @@ namespace api.layer.BusinessLayer
                     {
                         string apiResponse = await response.Content.ReadAsStringAsync();
                         PullRequestEntity pullRequestEntity = JsonConvert.DeserializeObject<PullRequestEntity>(apiResponse);
+
+                        await PullRequestSonarDetails(ToDoConstants.PULL_REQUEST_SONAR_URL + pullRequestEntity.number, pullRequestEntity.number);
 
                         pullRequestEntity.action = gitActions.action;
                         pullRequestEntity.userid = gitActions.sender.id;
