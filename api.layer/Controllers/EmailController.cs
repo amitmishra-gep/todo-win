@@ -13,7 +13,10 @@ namespace api.layer.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var abc = "test";
-            var rng = new Random();
+            var abc1 = "test";
+            var abc2 = "test";
+            var abc3 = "test";
+            var rng4 = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -24,6 +27,7 @@ namespace api.layer.Controllers
         
         private bool test()
         {
+            bool test = true;
             return true;
         }
     }
