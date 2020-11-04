@@ -16,7 +16,7 @@ namespace api.layer.Controllers
             var abc1 = "test";
             var abc2 = "test";
             var abc3 = "test";
-            var rng4 = new Random();
+            var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
