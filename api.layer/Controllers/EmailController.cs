@@ -23,7 +23,7 @@ namespace api.layer.Controllers
             .ToArray();
         }
 
-        private bool sum()
+        private int sum()
         {
             int unused = 456;
             int number1 = 1234;
@@ -32,7 +32,7 @@ namespace api.layer.Controllers
             return number3;
         }
 
-        private bool Add()
+        private int Add()
         {
             int unused = 456;
             int number1 = 1234;
