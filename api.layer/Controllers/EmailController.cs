@@ -13,6 +13,7 @@ namespace api.layer.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var abc = "test";
+            var abc1 = "test";
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
